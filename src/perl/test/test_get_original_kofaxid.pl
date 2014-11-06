@@ -24,9 +24,13 @@ $status = "REPLACE_";
 $got = get_original_kofaxid($status);
 is($got, 0, "test 4");
 
-$status = "REPLACE_ ";
-$got = get_original_kofaxid($status);
-is($got, " ", "test 5");
+TODO: {
+	local $TODO = "Empty id should not be allowed";
+
+	$status = "REPLACE_ ";
+	$got = get_original_kofaxid($status);
+	is($got, 0, "test 5");
+};
 
 $status = "REPLACE_900001001";
 $got = get_original_kofaxid($status);
