@@ -6,7 +6,7 @@ use warnings;
 use Test::More;
 
 my $todaysDate = getTodaysDate();
-diag("Today\'s date is $todaysDate");
+diag("Today's date is $todaysDate");
 
 ok($todaysDate ge 20141106, "test 1");
 ok($todaysDate lt 99991231, "test 2");
